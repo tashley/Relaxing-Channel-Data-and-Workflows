@@ -29,13 +29,12 @@ mpl.rcParams['xtick.minor.width'] = 0.7
 mpl.rcParams['ytick.minor.size'] = 2
 mpl.rcParams['ytick.minor.width'] = 0.7
 
-
 mpl.rcParams['axes.facecolor'] = 'white'
 mpl.rcParams['axes.edgecolor'] = 'black'
 mpl.rcParams['axes.linewidth'] = '1.1'
 
 mpl.rcParams['font.family'] = 'arial'
-mpl.rcParams['font.size'] = 10.33
+mpl.rcParams['font.size'] = 11
 
 # ==============================================================
 def make_colorbar(cax, cmap, ticklocs=[0,1], ticklabels=[0,1], label=None, labelpad=0):
@@ -65,8 +64,8 @@ def fig2_axes():
     ax0 = fig.add_axes([left/figw, bottom/figh, axw/figw, axh/figh])
     ax1 = fig.add_axes([(left + axw + wspace)/figw, bottom/figh, axw/figw, axh/figh])
     
-    axins0 = ax0.inset_axes([0.08, 0.07, 0.4, 0.4])
-    axins1 = ax1.inset_axes([0.08, 0.57, 0.4, 0.4])
+    axins0 = ax0.inset_axes([0.09, 0.07, 0.4, 0.4])
+    axins1 = ax1.inset_axes([0.09, 0.57, 0.4, 0.4])
     
     cax0 = ax0.inset_axes([0.49, 0.07, 0.03, 0.4])
     cax1 = ax1.inset_axes([0.49, 0.57, 0.03, 0.4])
@@ -79,7 +78,7 @@ def fig3_axes():
     ax1w = ax1h
 
     wspace = 0.5
-    hspace = 0.5
+    hspace = 0.4
 
     top = 0.1
     left = 0.5
@@ -87,12 +86,10 @@ def fig3_axes():
     right = 0.1
 
     ax0h = ax1h*(2/3)
-    ax1h = ax0h
-    ax1w = ax1h
-
+    
     figh = top + ax0h + hspace + ax1h + bottom
     figw = left + ax1w + wspace + ax1w + right
-    ax0w = (left + wspace + ax1w + right)
+    ax0w = ax1w + wspace + ax1w
 
     fig = plt.figure(figsize=(figw, figh), constrained_layout=False)
 
