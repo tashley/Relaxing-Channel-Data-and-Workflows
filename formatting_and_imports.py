@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import seaborn as sns
-from scipy.optimize import curve_fit
+from scipy.optimize import minimize
 import matplotlib.colors as colors
 import warnings
 from scipy.stats import norm
@@ -47,8 +47,8 @@ def make_colorbar(cax, cmap, ticklocs=[0,1], ticklabels=[0,1], label=None, label
     return cb
 
 # ==============================================================
-def fig2_axes():
-    axw = 3.5
+def fig2_axes(scale):
+    axw = scale
     axh = axw
     top = 0.1
     right = 0.1
@@ -73,8 +73,8 @@ def fig2_axes():
     return [ax0, ax1], [axins0, axins1], [cax0, cax1]
 
 # ==============================================================
-def fig3_axes():
-    ax1h = 3
+def fig3_axes(scale):
+    ax1h = scale
     ax1w = ax1h
 
     wspace = 0.5
