@@ -65,10 +65,10 @@ def fig2_axes(scale):
     ax1 = fig.add_axes([(left + axw + wspace)/figw, bottom/figh, axw/figw, axh/figh])
     
     axins0 = ax0.inset_axes([0.09, 0.07, 0.4, 0.4])
-    axins1 = ax1.inset_axes([0.47, 0.07, 0.4, 0.4])
+    axins1 = ax1.inset_axes([0.5, 0.07, 0.4, 0.4])
     
-    cax0 = ax0.inset_axes([0.50, 0.07, 0.03, 0.4])
-    cax1 = ax1.inset_axes([0.88, 0.07, 0.03, 0.4])
+    cax0 = ax0.inset_axes([0.5, 0.07, 0.03, 0.4])
+    cax1 = ax1.inset_axes([0.91, 0.07, 0.03, 0.4])
     
     return [ax0, ax1], [axins0, axins1], [cax0, cax1]
 
@@ -77,7 +77,7 @@ def fig3_axes(scale):
     ax1h = scale
     ax1w = ax1h
 
-    wspace = 0.5
+    wspace = 0.4
     hspace = 0.4
 
     top = 0.1
