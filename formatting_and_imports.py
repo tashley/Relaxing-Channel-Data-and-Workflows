@@ -5,6 +5,7 @@ import matplotlib as mpl
 import seaborn as sns
 from scipy.optimize import minimize
 import matplotlib.colors as colors
+import matplotlib.patches as mpatches
 import warnings
 from scipy.stats import norm
 import pandas as pd
@@ -50,7 +51,7 @@ def make_colorbar(cax, cmap, ticklocs=[0,1], ticklabels=[0,1], label=None, label
 def fig2_axes(scale):
     axw = scale
     axh = axw
-    top = 0.1
+    top = 0.2
     right = 0.1
     wspace = 0.6
     left = 0.6
@@ -65,36 +66,39 @@ def fig2_axes(scale):
     ax1 = fig.add_axes([(left + axw + wspace)/figw, bottom/figh, axw/figw, axh/figh])
     
     axins0 = ax0.inset_axes([0.09, 0.07, 0.4, 0.4])
-    axins1 = ax1.inset_axes([0.5, 0.07, 0.4, 0.4])
+    axins1 = ax1.inset_axes([0.47, 0.07, 0.4, 0.4])
     
     cax0 = ax0.inset_axes([0.5, 0.07, 0.03, 0.4])
-    cax1 = ax1.inset_axes([0.91, 0.07, 0.03, 0.4])
+    cax1 = ax1.inset_axes([0.88, 0.07, 0.03, 0.4])
     
     return [ax0, ax1], [axins0, axins1], [cax0, cax1]
 
 # ==============================================================
 def fig3_axes(scale):
-    ax1h = scale
-    ax1w = ax1h
+    ax2h = scale
+    ax2w = ax2h
 
-    wspace = 0.4
-    hspace = 0.4
+    wspace0 = 0
+    wspace2 = 0.2
+    hspace = 0.5
 
-    top = 0.1
+    top = 0.2
     left = 0.5
     bottom = 0.5
     right = 0.1
 
-    ax0h = ax1h*(2/3)
+    ax0h = ax2h*(2/3)
+    ax0w = ax0h
     
-    figh = top + ax0h + hspace + ax1h + bottom
-    figw = left + ax1w + wspace + ax1w + right
-    ax0w = ax1w + wspace + ax1w
+    figh = top + ax0h + hspace + ax2h + bottom
+    figw = left + ax2w + wspace2 + ax2w + right
+    ax1w = figw - (wspace0 + ax0w + left + right)
 
     fig = plt.figure(figsize=(figw, figh), constrained_layout=False)
 
-    ax0 = fig.add_axes([left/figw, (bottom + ax1h + hspace)/figh, ax0w/figw, ax0h/figh])
-    ax1 = fig.add_axes([left/figw, bottom/figh, ax1w/figw, ax1h/figh])
-    ax2 = fig.add_axes([(left+ax1w+wspace)/figw, bottom/figh, ax1w/figw, ax1h/figh])
+    ax0 = fig.add_axes([left/figw, (bottom + ax2h + hspace)/figh, ax0w/figw, ax0h/figh])
+    ax1 = fig.add_axes([(left + ax0w + wspace0)/figw, (bottom + ax2h + hspace)/figh, ax1w/figw, ax0h/figh])
+    ax2 = fig.add_axes([left/figw, bottom/figh, ax2w/figw, ax2h/figh])
+    ax3 = fig.add_axes([(left+ax2w+wspace2)/figw, bottom/figh, ax2w/figw, ax2h/figh])
 
-    return[ax0, ax1, ax2]
+    return[ax0, ax1, ax2, ax3]
