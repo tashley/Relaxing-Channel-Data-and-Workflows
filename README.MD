@@ -4,4 +4,6 @@ Ashley, T. C. and Strom, K (2022). Channel Width in Disequilibrium Rivers. Submi
 
 ___
 
-View a static copy of workflows by opening the .ipynb files here, or download the repository and open in jupyer Jupyter Notebook.
+==View a static copy of workflows by opening the .ipynb files here, or download the repository and open in Jupyter Notebook.==
+
+Main workflows:
