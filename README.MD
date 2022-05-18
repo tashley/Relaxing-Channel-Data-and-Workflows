@@ -4,11 +4,8 @@
 
 View a static copy of workflows by opening the .ipynb files here, or download the repository and open in Jupyter Notebook.
 
-___
+- **processing_raw_topography_data.ipynb** contains processing steps used to edit and merge laser scans of bed topography.
 
-### Description of workflows
-- **processing_raw_topography_data.ipynb** contains processing steps used to edit and merge laser scans of bed topography
+- **processing_raw_photos.ipynb** contains processing steps used to extract measurements of channel width from overhead images.
 
-- **processing_raw_photos.ipynb** contains processing steps used to extract measurements of channel width from overhead images
-
-- **make_final_figures.ipynb** contains sediment discharge calculations and final rendering of manuscript figures
+- **make_final_figures.ipynb** contains sediment discharge calculations and final rendering of manuscript figures.
