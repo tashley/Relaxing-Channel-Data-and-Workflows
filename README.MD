@@ -1,4 +1,4 @@
-## This repository contains data and reproducible workflows related
+###  This repository contains data and reproducible workflows related to
 
 > Ashley, T. C. and Strom, K (2022). Channel Width in Disequilibrium Rivers. Submitted to *Geophysical Research Letters.*
 
