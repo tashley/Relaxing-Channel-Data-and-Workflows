@@ -2,7 +2,7 @@
 
 > Ashley, T. C. and Strom, K (2022). Does the threshold of sediment motion constrain the width of an incising laboratory river?. Submitted to *Geophysical Research Letters.*
 
-View a static copy of workflows by opening the .ipynb files here, or download the repository and open in Jupyter Notebook.
+View a static copy of workflows by opening the .ipynb files at https://github.com/tashley/Relaxing-Channel-Data-and-Workflows, or download the repository and open in Jupyter Notebook.
 
 - **processing_raw_topography_data.ipynb** contains processing steps used to edit and merge laser scans of bed topography.
 
