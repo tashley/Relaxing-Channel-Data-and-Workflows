@@ -8,4 +8,4 @@ View a static copy of workflows by opening the .ipynb files at https://github.co
 
 - **processing_raw_photos.ipynb** contains processing steps used to extract measurements of channel width from overhead images.
 
-- **make_final_figures.ipynb** contains sediment discharge calculations and final rendering of manuscript figures.
+- **make_final_figures.ipynb** contains sediment discharge calculations and code to perform final rendering of manuscript figures.
