@@ -1,6 +1,6 @@
 ###  This repository contains data and reproducible workflows related to
 
-> Ashley, T. C. and Strom, K (2022). Does the threshold of sediment motion constrain the width of an incising laboratory river?. Submitted to *Geophysical Research Letters.*
+> Ashley, T. C., & Strom, K. (2022). Does the threshold of sediment motion constrain the width of an incising laboratory river? Geophysical Research Letters, 49, e2022GL099718. https://doi.org/10.1029/2022GL099718
 
 View a static copy of workflows by opening the .ipynb files at https://github.com/tashley/Relaxing-Channel-Data-and-Workflows, or download the repository and open in Jupyter Notebook.
 
